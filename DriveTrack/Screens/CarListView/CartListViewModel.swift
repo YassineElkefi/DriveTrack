@@ -11,4 +11,6 @@ import Combine
 class CarListViewModel: ObservableObject {
     @Published var cars: [Car] = MockData.cars
     @Published var showAddCar = false
+    @Published var isShowingDetail = false
+    @Published var selectedCar: Car?
 }
