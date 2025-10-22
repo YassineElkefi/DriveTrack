@@ -6,13 +6,9 @@
 //
 
 import SwiftUI
+import Combine
 
-struct CartListViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    CartListViewModel()
+class CarListViewModel: ObservableObject {
+    @Published var cars: [Car] = MockData.cars
+    @Published var showAddCar = false
 }

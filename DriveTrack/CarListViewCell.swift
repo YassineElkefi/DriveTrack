@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct CarListViewCell: View {
+    let car: Car
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Image("car-placeholder")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 150, height: 100)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            
+            VStack(spacing: 5){
+                Text("\(car.brand) \(car.model)")
+                    .font(.headline)
+                    .fontWeight(.medium)
+                Text("Year: \(String(car.year))")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .fontWeight(.semibold)
+            }
+            .padding(.leading)
+        }
     }
 }
 
 #Preview {
-    CarListViewCell()
+    CarListViewCell(car: MockData.sampleCar)
 }
