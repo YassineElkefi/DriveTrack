@@ -11,7 +11,7 @@ import SwiftUI
 struct DriveTrackApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DriveTrackTabView()
         }
     }
 }
