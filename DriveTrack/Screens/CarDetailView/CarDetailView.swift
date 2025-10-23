@@ -33,13 +33,13 @@ struct CarDetailView: View {
                         Text("License Plate")
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                        Text("\(car.LicensePlate)")
+                        Text("\(car.licensePlate)")
                     }
                     VStack{
                         Text("Odometer")
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                        Text("\(String(car.Odometer)) km")
+                        Text("\(String(car.odometer)) km")
                     }
                 }
                 Spacer()
